@@ -8,6 +8,7 @@ tags:
 ---
 ![](/thumbnails/t2.jpg)
 以下摘自《JavaScript 权威指南（第6版）》
+<!-- more -->
 * 如果当前语句和下一行语句无法合并解析，JavaScript则在第一行后填补分号。除了：①涉及return，break和continue语句，如果这三个关键字后紧跟着换行，JavaScript则会在换行处填补分号。
 
 ```javascript

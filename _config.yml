@@ -6,7 +6,10 @@
 title: PPOffice' Blog
 subtitle:
 description:
-author: ppoffice
+author: PPOffice
+author_title: 'Web开发者 & 设计师'
+avatar: css/images/avatar.png
+location: '中国，哈尔滨'
 language: zh-CN
 timezone:
 
@@ -62,7 +65,10 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: hueman
+theme: icarus
+
+# Disqus
+disqus_shortname: ppofficeongithub
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

@@ -11,6 +11,7 @@ tags:
 [Rebecca Murphey](http://rmurphey.com/) 的 [Baseline For Front-End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/) 是你在准备面试前应该阅读的绝佳资源。
 
 **记住：** 很多问题都是开放的，可以引发有趣的讨论。这比直接的答案更能体现此人的能力。
+<!-- more -->
 
 ## <a name='toc'>目录</a>
 
@@ -165,7 +166,11 @@ tags:
 
 * 解释一下你对盒模型的理解，以及如何在 CSS 中告诉浏览器使用不同的盒模型来渲染你的布局。
 
-* 请解释一下 ```* { box-sizing: border-box; }``` 的作用, 并且说明使用它有什么好处？
+* 请解释一下
+```css
+* { box-sizing: border-box; }
+```
+的作用, 并且说明使用它有什么好处？
 
 * 请罗列出你所知道的 display 属性的全部值
 
