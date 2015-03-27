@@ -1,0 +1,63 @@
+title: "Ripple Button Demo"
+date: 2015-03-26 21:44:28
+comments: false
+---
+<style type="text/css">
+  button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: 120px;
+    height: 36px;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+  }
+  button > div {position:absolute; background-color: rgba(255,255,255,0.4); border-radius: 50%;}
+  .success {background-color: #04A43B;}
+  .info {background-color: #0C9AF2;}
+  .danger {background-color: #dd0d32;}
+  .long {width: 200px;}
+  .high {height: 200px; width: 90px;}
+</style>
+<button class="success">Click Me!</button>
+<button class="info long">Click Me!</button>
+<button class="danger high">Click Me!</button>
+<script type="text/javascript">
+	var buttons = document.getElementsByTagName('button'), speed = 8;
+	for (var i = 0; i < buttons.length; i++) {
+    buttons[i].onmousedown = function (e) {
+			var e = e || window.event,
+				  offsetX = e.offsetX,
+				  offsetY = e.offsetY,
+          radiusX = (this.offsetWidth - offsetX > offsetX?this.offsetWidth - offsetX:offsetX),
+          radiusY = (this.offsetHeight - offsetY > offsetY?this.offsetHeight - offsetY:offsetY),
+          offsetSize = Math.sqrt(Math.pow(radiusX,2) + Math.pow(radiusY,2)),
+				  inner = document.createElement('div');
+     this.appendChild(inner);
+			var interval = setInterval(function () {
+				inner.style.width = (inner.offsetWidth + speed) + 'px';
+				inner.style.height = (inner.offsetWidth + speed) + 'px';
+				inner.style.left = (offsetX - inner.offsetWidth/2) + 'px';
+				inner.style.top = (offsetY - inner.offsetHeight/2) + 'px';
+				inner.style.opacity = inner.offsetWidth/offsetSize/2;
+				if(inner.offsetWidth >= offsetSize*2 && inner.offsetHeight >= offsetSize*2) {
+					clearInterval(interval);
+				}
+			}, 10);
+		}
+		buttons[i].onmouseup = function (e) {
+			var e = e || window.event,
+          this_ = this,
+  				inner = this.children[0];
+			var interval = setInterval(function () {
+				inner.style.opacity = inner.style.opacity - speed/this_.offsetWidth;
+				if(inner.style.opacity <= 0) {
+          this_.removeChild(inner);
+					clearInterval(interval);
+				}
+			}, 10);
+		}
+	};
+</script>
