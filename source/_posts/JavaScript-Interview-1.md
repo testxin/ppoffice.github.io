@@ -1,9 +1,10 @@
 title: 前端工作面试问题（一）
 date: 2015-03-15
 categories: 
-- 前端技术
+- Front-End
+- JavaScript
 tags:
-- 面试
+- Interview
 ---
 ![](/thumbnails/t1.jpg)
 **备注:** 本 repo 包含了一些前端面试问题用于考查候选者。不建议对单个候选者问及每个问题（那需要好几个小时）。只要从列表里挑选一些，就能帮助你考查候选者是否具备所需要的技能了。

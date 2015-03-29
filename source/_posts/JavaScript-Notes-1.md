@@ -1,7 +1,7 @@
 title: "JavaScript杂记（一）"
 date: 2015-03-16 09:13:36
 categories:
-- 前端技术
+- Front-End
 - JavaScript
 tags:
 - JavaScript

@@ -1,8 +1,7 @@
 title: "Ripple Button（涟漪按钮）原生JavaScript实现"
 date: 2015-03-26 21:44:28
 categories:
-- 前端技术
-- JavaScript
+- Front-End
 tags:
 - JavaScript
 ---
