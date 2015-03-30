@@ -2,7 +2,6 @@ title: 前端工作面试问题（一）
 date: 2015-03-15
 categories: 
 - Front-End
-- JavaScript
 tags:
 - Interview
 ---
