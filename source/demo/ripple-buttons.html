@@ -25,10 +25,10 @@ comments: false
 <button class="info long">Click Me!</button>
 <button class="danger high">Click Me!</button>
 <script type="text/javascript">
-	var buttons = document.getElementsByTagName('button'), speed = 8;
+	var buttons = document.getElementsByTagName('button'), speed = 6;
 	for (var i = 0; i < buttons.length; i++) {
     buttons[i].onmousedown = function (e) {
-      if(this.isAnimating) return false;
+      if(this.children.length) return false;
 			var e = e || window.event,
           this_ = this,
 				  offsetX = e.offsetX,
@@ -45,7 +45,6 @@ comments: false
         inner = this.children[0];
       }
 			var interval = setInterval(function () {
-        this_.isAnimating = true;
 				inner.style.width = (inner.offsetWidth + speed) + 'px';
 				inner.style.height = (inner.offsetWidth + speed) + 'px';
 				inner.style.left = (offsetX - inner.offsetWidth/2) + 'px';
@@ -53,12 +52,11 @@ comments: false
 				inner.style.opacity = inner.offsetWidth/offsetSize/2;
 				if(inner.offsetWidth >= offsetSize*2 && inner.offsetHeight >= offsetSize*2) {
 					clearInterval(interval);
-          this_.isAnimating = false;
 				}
 			}, 10);
 		}
 		buttons[i].onmouseup = function (e) {
-      if(!this.isAnimating) return false;
+      if(!this.children.length) return false;
 			var e = e || window.event,
           this_ = this,
   				inner = this.children[0];
